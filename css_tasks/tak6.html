@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+
+        li {
+            list-style-type: none;
+            margin-left: 34%;
+            margin-right: 34%;
+            display: flex;
+
+        }
+
+        label {
+            font-size: large;
+            font-weight: bolder;
+        }
+
+        .input {
+            font-size: large;
+            padding: 5px;
+            border: 1px groove #ececec;
+            border-right: none;
+            padding-bottom: 3px;
+        }
+
+        #button {
+            margin-right: 40%;
+            margin-left: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-right: 40%;
+            padding-left: 40%;
+            font-size: larger;
+            color: white;
+            background-color: #4cb050;
+            border: hidden #4cb050;
+        }
+
+        #cancel {
+            width: 100px;
+            height: 30px;
+            background-color: red;
+            border-radius: 6px;
+            color: white;
+            border: none;
+        }
+
+        td p {
+            display: inline;
+            padding-left: 200px;
+        }
+
+        td p a {
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="855909df65727e5c7ba5e11a8c45849a.jpg" alt="image" class="img-circle" width="304px" height="236px">
+
+    <form action="">
+        <ul>
+            <li><label for="fname">Name:</label></li>
+            <li><input type="text" id="fname" name="Name" placeholder="Your name" size="40" class="input"></li>
+        </ul>
+        <ul>
+            <li><label for="Password">Password:</label></li>
+            <li><input type="Password" id="Password" name="Password" placeholder="Your name" size="40" class="input">
+            </li>
+        </ul>
+        <ul>
+            <li><button type="submit" id="button">submit</button></li>
+        </ul>
+        <ul>
+            <li><input type="checkbox" id="remember" checked /> <label style="font-weight: 100;" for="remember">Remember
+                    me</label></li>
+        </ul>
+        <ul>
+            <li>
+                <table
+                    style="background-color: #f1f1f1;border: 0.1ch groove #d2d2d2;border-bottom: none;border-left: none;border-right: none;">
+                    <tr>
+                        <td style="padding:10px; height:auto;thin solid #dcd9d9;"><input type="reset" value="Cancel"
+                                id="cancel" /></td>
+                        <td>
+                            <p>Forgot <a href="pswd.html">Password?</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

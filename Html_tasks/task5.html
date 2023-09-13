@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration form</title>
+        <style>
+    </style>
+    </head>
+    <body>
+        <h1 align="center" style="color: blue;" >Registration form</h1>
+        <br>
+        <table border="1" cellspacing="0" align="center">
+            <form action="">
+                <tr>
+                    <td><label for="firstName">Full Name:</label></td>
+                    <td><input type="text" id="firstName" size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="lname">Last Name:</label></td>
+                    <td><input type="text" id="lname" name="lname" size="53" /></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="password">Password:</label></td>
+                    <td><input type="password" id="password" name="password" size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="re-enter">Re-enter Password:</label></td>
+                    <td><input type="password" id="re-enter" name="re-enter" size="53"/></td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><label for="gender">Gender:</label></td>
+                    <td>
+                        <input type="radio" name="gender" id="Male"
+                            value="Gender" size="53"/><label for="gender">Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="radio" name="gender" id="Female" size="53"/><label
+                            for="gender">Female</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age"  size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone number:</label></td>
+                    <td><input type="number" id="phone" name="phone" size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="address">Address:</label></td>
+                    <td><textarea id="address" name="address" rows="8" cols="50"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label for="state">State:</label></td>
+                    <td><input type="text" id="state" name="state" size="53"/></td>
+                </tr>
+                <tr>
+                    <td><label for="country">Country:</label></td>
+                    <td>
+                        <select name="Country" id="country">
+                            <option value id="country">Choose your country</option>
+                            <option value="India" id="country">India</option>
+                            <option value="United States" id="country">
+                                United States
+                            </option>
+                            <option value="Canada" id="country">Canada</option>
+                            <option value="Australia" id="country">Australia</option>
+                            <option value="United Kingdom" id="country">
+                                United Kingdom
+                            </option>
+                            <option value="France" id="country">France</option>
+                            <option value="Germany" id="country">Germany</option>
+                            <option value="Japan" id="country">Japan</option>
+                            <option value="Brazil" id="country">Brazil</option>
+                            <option value="Mexico" id="country">Mexico</option>
+                            <option value="South Africa" id="country">South
+                                Africa</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="lang"> Language Known</label></td>
+                    <td>
+                        <input type="checkbox" id="eng" value="English"><label for="eng">English</label>
+                        <input type="checkbox" id="kan" value="Kannada"><label for="kan">Kannada</label>
+                        <input type="checkbox" id="hin" value="Hindi"><label for="hin">Hindi</label>
+                        <input type="checkbox" id="tel" value="telugu"><label for="tel">Telugu</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="checkbox" id="dec" name="declaration" />
+                        <label for="dec">Hereby I declare all the given details
+                            are true</label>
+                    </td>
+                </tr>
+                <div class="Login">
+                    <tr>
+                        <td colspan="2" align="right">
+                            Login in to
+                            <a
+                                href="https://www.w3schools.com/tags/tag_textarea.asp">Ethnus</a>
+                            website
+                        </td>
+                    </tr>
+                </div>
+            </form>
+        </table>
+        <br>
+        <div align="center">
+            <input type="button" value="submit"/>
+        </div>
+    </body>
+</html>    

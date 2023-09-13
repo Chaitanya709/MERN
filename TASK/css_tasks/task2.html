@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        ul {
+            list-style-type: none;
+            background-color: white;
+            overflow: hidden;
+            border: 1px solid black;
+            padding: 1%;
+            margin-left: 50%;
+        }
+
+        li {
+            float: left;
+            border-right: 1px solid blue;
+            background-color: #979494;
+        }
+
+        li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: blue;
+            width: 100px;
+            height: 20px;
+        }
+
+        li a:hover:not(.active) {
+            background-color: #0aa317;
+        }
+
+        #active {
+            background-color: #4e5059;
+            color: white;
+        }
+        h4{
+            margin-left: 50%;
+        }
+        
+        .ul {
+            list-style-type: none;
+            background-color: rgb(255, 255, 255);
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            border: 1px inset black;
+            width: 150px;
+        }
+        #div{
+            padding: 10px;
+            padding-bottom: 0;
+        }
+
+        .li a {
+            display: block;
+            text-align: left;
+            padding: 14px 16px;
+            text-decoration: none;
+            background-color: aqua;
+            color: blue;
+        }
+
+        .li a:hover:not(.active) {
+            background-color: #0aa317;
+        }
+        .li .active {
+            background-color: #fea500;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Horizontal Navigation Bar</h4>
+    <ul>
+        <li><a id="active" href="#">Home</a></li>
+        <li><a href="#">Java</a></li>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#"></a></li>
+    </ul>
+
+    <div class="nav">
+        <h3>Vertical Navigation Bar</h3>
+        <ul class="ul">
+        <div id="div">
+            <li class="li"><a class="active" href="http://127.0.0.1:5500/html%20tasks.html/task2.html" target="_blank">Home</a>
+            </li>
+            <li class="li"><a href="#">Java</a></li>
+            <li class="li"><a href="#">HTML</a></li>
+            <li class="li"><a href="#">CSS</a></li>
+            <li class="li"><a href="#">Bootstrap</a></li>
+        </div>
+        </ul>
+    </div>
+
+</body>
+
+</html

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration form</title>
+    <style>
+        table{
+            background-image: linear-gradient(#fbf9c6,#da80b6);
+        }
+        .error-message {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center" style="color: blue">Registration form</h1>
+    <br />
+    <form name="validate" onsubmit="return validateForm()">
+        <table cellspacing="7" align="center">
+            <tr>
+                <td><label for="firstName">Full Name:</label></td>
+                <td>
+                    <input type="text" id="firstName" name="firstName" size="53" />
+                </td>
+                <td><span id="firstNameError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="lname">Last Name:</label></td>
+                <td>
+                    <input type="text" id="lname" name="lname" size="53" />
+                </td>
+                <td><span id="lastNameError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="email">Email:</label></td>
+                <td>
+                    <input type="email" id="email" name="email" size="53" />
+                </td>
+                <td><span id="emailError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="password">Password:</label></td>
+                <td>
+                    <input type="password" id="password" name="password" size="53" />
+                </td>
+                <td><span id="passwordError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="re-enter">Re-enter Password:</label></td>
+                <td>
+                    <input type="password" id="re-enter" name="re-enter" size="53" />
+                </td>
+                <td><span id="reenterPasswordError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td rowspan="2"><label for="gender">Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" id="Male" value="Gender" size="53" /><label
+                        for="gender">Male</label>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="radio" name="gender" id="Female" size="53" /><label for="gender">Female</label>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><label for="age">Age:</label></td>
+                <td>
+                    <input type="number" id="age" name="age" size="53" />
+                </td>
+                <td><span id="ageError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="phone">Phone number:</label></td>
+                <td>
+                    <input type="number" id="phone" name="phone" size="53" />
+                </td>
+                <td><span id="phoneError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="address">Address:</label></td>
+                <td>
+                    <textarea id="address" name="address" rows="8" cols="50"></textarea>
+                </td>
+                <td><span id="addressError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="state">State:</label></td>
+                <td>
+                    <input type="text" id="state" name="state" size="53" />
+                </td>
+                <td><span id="stateError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td><label for="country">Country:</label></td>
+                <td>
+                    <select name="Country" id="country">
+                        <option value="">Choose your country</option>
+                        <option value="India">India</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Australia">Australia</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="South Africa">South Africa</option>
+                    </select>
+                </td>
+                <td><span id="countryError" class="error-message"></span></td>
+            </tr>
+
+            <tr>
+                <td><label for="lang"> Language Known</label></td>
+                <td>
+                    <input type="checkbox" id="eng" value="English" /><label for="eng">English</label>
+                    <input type="checkbox" id="kan" value="Kannada" /><label for="kan">Kannada</label>
+                    <input type="checkbox" id="hin" value="Hindi" /><label for="hin">Hindi</label>
+                    <input type="checkbox" id="tel" value="telugu" /><label for="tel">Telugu</label>
+                </td>
+                <td><span id="languageError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="dec" name="declaration" />
+                    <label for="dec">Hereby I declare all the given details
+                        are true</label>
+                </td>
+                <td><span id="declarationError" class="error-message"></span></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="right">
+                    Login in to
+                    <a href="https://www.w3schools.com/tags/tag_textarea.asp">Ethnus</a>
+                    website
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align="center"><input type="submit" value="Submit" /></td>
+                <td></td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function validateForm() {
+            let firstName = document.getElementById("firstName").value.trim();
+            let lastName = document.getElementById("lname").value.trim();
+            let email = document.getElementById("email").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let reenterPassword = document.getElementById("re-enter").value.trim();
+            let age = document.getElementById("age").value.trim();
+            let phone = document.getElementById("phone").value.trim();
+            let address = document.getElementById("address").value.trim();
+            let state = document.getElementById("state").value.trim();
+            let country = document.getElementById("country").value;
+            let language = document.querySelectorAll('input[name="lang"]:checked');
+            let declaration = document.getElementById("dec").checked;
+
+            resetErrors();
+
+            let isValid = true;
+
+            if (firstName === "") {
+                setError("firstNameError", "Poor");
+                isValid = false;
+            }
+
+            if (lastName === "") {
+                setError("lastNameError", "Poor");
+                isValid = false;
+            }
+
+            if (email === "") {
+                setError("emailError", "Poor");
+                isValid = false;
+            } else if (!isValidEmail(email)) {
+                setError("emailError", "Poor");
+                isValid = false;
+            }
+
+            if (password === "") {
+                setError("passwordError", "Poor");
+                isValid = false;
+            } else if (!isValidPassword(password)) {
+                setError("passwordError", "Poor");
+                isValid = false;
+            }
+
+            if (reenterPassword === "" || password !== reenterPassword) {
+                setError("reenterPasswordError", "Poor or mismatch");
+                isValid = false;
+            }
+
+            if (age === "") {
+                setError("ageError", "Poor");
+                isValid = false;
+            }
+
+            if (phone === "") {
+                setError("phoneError", "Poor");
+                isValid = false;
+            } else if (!isValidPhone(phone)) {
+                setError("phoneError", "Poor");
+                isValid = false;
+            }
+
+            if (address === "") {
+                setError("addressError", "Poor");
+                isValid = false;
+            }
+
+            if (state === "") {
+                setError("stateError", "Poor");
+                isValid = false;
+            }
+
+            if (country === "") {
+                setError("countryError", "Poor");
+                isValid = false;
+            }
+
+            if (language.length === 0) {
+                setError("languageError", "Poor");
+                isValid = false;
+            }
+
+            if (!declaration) {
+                setError("declarationError", "Poor");
+                isValid = false;
+            }
+
+            return isValid;
+        }
+
+        function setError(id, message) {
+            let errorElement = document.getElementById(id);
+            errorElement.textContent = message;
+        }
+
+        function resetErrors() {
+            let errorElements = document.querySelectorAll(".error-message");
+            errorElements.forEach(function (element) {
+                element.textContent = "";
+            });
+        }
+
+        function isValidEmail(email) {
+            let emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            return emailPattern.test(email);
+        }
+
+        function isValidPassword(password) {
+            let passwordPattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+            return passwordPattern.test(password);
+        }
+
+        function isValidPhone(phone) {
+            let phonePattern = /^\d{10}$/; // Assumes a 10-digit phone number
+            return phonePattern.test(phone);
+        }
+    </script>
+</body>
+
+</html>

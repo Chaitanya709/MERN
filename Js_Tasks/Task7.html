@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task-7</title>
+  <style>
+    .box {
+      width: 100px;
+      height: 100px;
+      animation: slide 5s linear infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(100vw);
+      }
+    }
+
+    .animation-stopped {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body>
+  <center>
+    <div class="box animation-stopped"><img src="./train.png"></div>
+    <h2 style="color:rgb(59, 66, 190); margin-top:15%;">Click the following buttons to handle animation</h2>
+    <button type="button" id="startBtn" onclick="start()">Start</button>
+    <button id="stopBtn" onclick="stop()">Stop</button>
+
+    <script>
+      const box = document.querySelector('.box');
+
+      function start() {
+        box.classList.remove('animation-stopped');
+      }
+
+      function stop() {
+        box.classList.add('animation-stopped');
+      }
+    </script>
+  </center>
+</body>
+
+</html>

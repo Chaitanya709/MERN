@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input type="button" value="ShowTime" onclick="showTime()" />
+        <br>
+        <div id="output"></div>
+        <br>
+        <input type="button" value="ShowDate" onclick="showDate()" />
+        <div id="output1"></div>
+    </form>
+
+    <script>
+        function showTime() {
+            let date = new Date();
+            let time = date.toLocaleTimeString();
+            
+            // Display the time below the buttons
+            document.getElementById('output').innerText = `Current time: ${time}`;
+        }
+
+        function showDate() {
+            // Create a new Date object to get the current date
+            const currentDate = new Date();
+
+            // Get the day of the month (1-31)
+            const dayOfMonth = currentDate.getDate();
+
+            // Get the name of the month
+            const monthNames = [
+                "January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"
+            ];
+            const monthName = monthNames[currentDate.getMonth()];
+
+            // Get the year (4 digits)
+            const year = currentDate.getFullYear();
+
+            // Display the date below the buttons
+            document.getElementById('output1').innerText = `Day: ${dayOfMonth}\nMonth: ${monthName}\nYear: ${year}`;
+        }
+    </script>
+</body>
+
+</html>

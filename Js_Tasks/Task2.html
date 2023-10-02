@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="1"/>
+        <button value="submit" onclick="validate()">Submit</button>
+    </form>
+    <p id="res"></p>
+   <script>
+    function validate(){
+        var a=document.getElementById("1").value;
+        var arr=a.split();
+        arr.sort();
+        var str=arr.join();
+        document.getElementById("res").textContent="the sorted string is:"+str;
+    }
+    
+   </script> 
+</body>
+</html>

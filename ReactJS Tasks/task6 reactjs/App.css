@@ -1,0 +1,14 @@
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.home {
+  background-color: #007bff;
+  color: white;
+  padding: 100px 0;
+}
+
+.about, .contact {
+  padding: 40px 0;
+}
